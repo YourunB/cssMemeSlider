@@ -49,7 +49,7 @@ body {
 }
 
 .slider__title {
-  width: 80%;
+  width: 75%;
   display: flex;
   gap: 100%;
   overflow: hidden;
@@ -71,6 +71,37 @@ body {
   cursor: pointer;
 }
 
+.slider__click-zone_btn {
+  box-sizing: border-box;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.125rem solid white;
+  background: white;
+  transition: 1s;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+label:hover .slider__click-zone_btn {
+  background: yellow;
+  border-color: yellow;
+  transform: scale(1.2);
+}
+
+input:nth-of-type(1):checked ~ label:nth-last-of-type(4) .slider__click-zone_btn {background: none;}
+input:nth-of-type(2):checked ~ label:nth-last-of-type(3) .slider__click-zone_btn {background: none;}
+input:nth-of-type(3):checked ~ label:nth-last-of-type(2) .slider__click-zone_btn {background: none;}
+input:nth-of-type(4):checked ~ label:nth-last-of-type(1) .slider__click-zone_btn {background: none;}
+
 .slider__btn:nth-child(1):checked ~ .slider__display .slider__display_image {transform: translateX(0);}
 .slider__btn:nth-child(1):checked ~ .slider__title .slider__title_text {transform: translateX(0);}
 
@@ -89,6 +120,9 @@ body {
   }
   .slider__title {
     width: 100%;
+  }
+  label {
+    order: 1;
   }
   .slider__title {width: 100%;}
 }
