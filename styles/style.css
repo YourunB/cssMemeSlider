@@ -97,6 +97,10 @@ label:hover .slider__click-zone_btn {
   transform: scale(1.2);
 }
 
+label:active .slider__click-zone_btn {
+  background: red;
+}
+
 input:nth-of-type(1):checked ~ label:nth-last-of-type(4) .slider__click-zone_btn {background: none;}
 input:nth-of-type(2):checked ~ label:nth-last-of-type(3) .slider__click-zone_btn {background: none;}
 input:nth-of-type(3):checked ~ label:nth-last-of-type(2) .slider__click-zone_btn {background: none;}
